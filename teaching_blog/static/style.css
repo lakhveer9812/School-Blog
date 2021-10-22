@@ -1,0 +1,15 @@
+html,
+body,
+header,
+#intro{
+    height: 100%;
+}
+
+
+#intro{
+    background-image: url('{% static "image/eee.jpg" %}');
+    height:100%;
+    width: 100%;
+    background-size:cover;
+
+}

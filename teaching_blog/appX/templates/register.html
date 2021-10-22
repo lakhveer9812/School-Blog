@@ -1,0 +1,75 @@
+{% extends 'home.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+
+<form action="register" method="POST">
+    <div id="rg"
+
+
+{% csrf_token %}
+
+<table align="center" class="text-center">
+    <tr>
+        <th colspan="2"><h1 style="color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+          "">Registration</h1></th>
+
+    </tr>
+    <tr>
+        <td>
+            <input type="text-center" type="text" name="first_name" placeholder="enter Name"><br><br>
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text-center" type="text" name="last_name" placeholder="enter Last name"><br><br>
+            
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text-center" type="text" name="username" placeholder="enter Username"><br><br>
+            
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text-center" type="text" name="email" placeholder="enter Email"><br><br>
+
+            
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text-center" type="text" name="password1" placeholder="enter Password"><br><br>
+            
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text-center" type="text" name="password2" placeholder="retype Password"><br><br>
+            
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button type="submit">submit</button>
+        </td>
+    </tr>
+    <div>
+        <tr>
+            <td colspan="2">
+                {% for msg in messages %}
+                <h3>{{msg}}</h3>
+                {% endfor %}
+            </td>
+        </tr>
+    </div>
+    
+</table>
+</form>
+{% endblock %}
+
+

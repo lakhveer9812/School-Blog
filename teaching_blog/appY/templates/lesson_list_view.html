@@ -1,0 +1,12 @@
+{% extends 'home.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+    {% for lesson in subjects.lessons.all %}
+ <a href="{% url 'appY:lesson_detail' slug=lesson.slug subject=subjects.slug standard=lesson.Standard.slug %}">Chapter-{{lesson.position}}: {{lesson.name}}</a>
+        
+{% endfor %}
+
+<a href="{% url 'appY:lesson_create' standard=subjects.standard.slug slug=subjects.slug %}">Create Lesson</a>
+
+{% endblock %}

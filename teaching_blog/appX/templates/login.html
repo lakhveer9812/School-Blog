@@ -1,0 +1,30 @@
+{% extends 'home.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<form action="login" method="POST" style="border-radius: 30px;">
+{% csrf_token %}
+
+<table align="center">
+        <tr>
+            <th colspan="2"><h1 style="color: white;
+                text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+              "">LOGIN</h1></th>
+        </tr>
+        <tr>
+            <td><input type="text-center" type="text" name="username" placeholder="enter username"></td>
+
+        </tr>
+        <tr>
+            <td><input type="text-center" type="text" name="password" placeholder="enter password"></td>
+             
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit">SUBMIT</button>
+            </td>
+        </tr>
+        
+    </table>
+</form>
+{% endblock %}

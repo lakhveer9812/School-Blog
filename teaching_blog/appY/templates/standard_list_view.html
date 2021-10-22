@@ -1,0 +1,9 @@
+{% extends 'home.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+{% for standard in standards %}
+<a href="{% url 'appY:subject_list' slug=standard.slug %}">{{standard.name}}</a><br>
+{% endfor %}
+
+{% endblock %}
